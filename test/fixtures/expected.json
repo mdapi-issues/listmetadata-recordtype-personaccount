@@ -1,0 +1,41 @@
+[
+  {
+    "createdById": "0053D0000050OT3QAM",
+    "createdByName": "User User",
+    "createdDate": "2020-11-18T13:31:00.000Z",
+    "fileName": "objects/Account.object",
+    "fullName": "Account.Business_Account",
+    "id": "0123D000001leAQQAY",
+    "lastModifiedById": "0053D0000050OT3QAM",
+    "lastModifiedByName": "User User",
+    "lastModifiedDate": "2020-11-18T13:31:00.000Z",
+    "manageableState": "unmanaged",
+    "type": "RecordType"
+  },
+  {
+    "createdById": "0053D0000050OT3QAM",
+    "createdByName": "User User",
+    "createdDate": "2020-11-19T08:27:12.000Z",
+    "fileName": "objects/PersonAccount.object",
+    "fullName": "PersonAccount.Freelancer",
+    "id": "0123D000001ljZmQAI",
+    "lastModifiedById": "0053D0000050OT3QAM",
+    "lastModifiedByName": "User User",
+    "lastModifiedDate": "2020-11-19T08:27:12.000Z",
+    "manageableState": "unmanaged",
+    "type": "RecordType"
+  },
+  {
+    "createdById": "0053D0000050OT3QAM",
+    "createdByName": "User User",
+    "createdDate": "2020-11-18T13:31:01.000Z",
+    "fileName": "objects/PersonAccount.object",
+    "fullName": "PersonAccount.PersonAccount",
+    "id": "0123D000001leARQAY",
+    "lastModifiedById": "0053D0000050OT3QAM",
+    "lastModifiedByName": "User User",
+    "lastModifiedDate": "2020-11-18T13:31:01.000Z",
+    "manageableState": "unmanaged",
+    "type": "RecordType"
+  }
+]
