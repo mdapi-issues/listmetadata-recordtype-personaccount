@@ -1,5 +1,5 @@
 {
-  "name": "listmetadata-recordtype-personaccount",
+  "name": "@mdapi-issues/listmetadata-recordtype-personaccount",
   "description": "Minimal working example to demonstrate a bug in listMetadata that RecordTypes of PersonAccount are wrongly listed as RecordTypes of Account",
   "private": true,
   "version": "0.0.0-development",
@@ -26,7 +26,9 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "files": [],
+  "files": [
+    "/lib"
+  ],
   "homepage": "https://github.com/mdapi-issues/listmetadata-recordtype-personaccount",
   "keywords": [
     "salesforce",
@@ -35,6 +37,7 @@
     "MWE"
   ],
   "license": "MIT",
+  "main": "/lib/workaround.js",
   "repository": "mdapi-issues/listmetadata-recordtype-personaccount",
   "scripts": {
     "build": "rm -rf lib && tsc -b",
