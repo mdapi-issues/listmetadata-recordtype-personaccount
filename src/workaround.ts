@@ -1,4 +1,29 @@
-import { FileProperties } from 'jsforce';
+import type { FileProperties, Connection } from 'jsforce';
+
+export interface RecordType {
+  DeveloperName: string;
+  SobjectType: string;
+  IsPersonType: boolean;
+}
+
+export async function queryPersonAccountRecordTypes(
+  conn: Connection
+): Promise<Array<RecordType>> {
+  let personAccountRecordTypes = [];
+  try {
+    const personAccountRecordTypesResult = await conn.query<RecordType>(
+      `SELECT DeveloperName, SobjectType, IsPersonType FROM RecordType WHERE SobjectType='Account' AND IsPersonType=true`
+    );
+    personAccountRecordTypes = Array.isArray(
+      personAccountRecordTypesResult.records
+    )
+      ? personAccountRecordTypesResult.records
+      : [personAccountRecordTypesResult.records];
+  } catch (e) {
+    // ignore errors here since the query only succeeds when PersonAccounts are enabled
+  }
+  return personAccountRecordTypes;
+}
 
 export function fixPersonAccountRecordTypes(
   fileProperties: Array<FileProperties>,
@@ -22,10 +47,4 @@ export function fixPersonAccountRecordTypes(
     }
     return fileProperty;
   });
-}
-
-interface RecordType {
-  DeveloperName: string;
-  SobjectType: string;
-  IsPersonType: boolean;
 }
