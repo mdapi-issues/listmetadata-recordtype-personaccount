@@ -6,15 +6,12 @@
   "author": "Matthias Rolke @amtrack",
   "bugs": "https://github.com/mdapi-issues/listmetadata-recordtype-personaccount/issues",
   "dependencies": {
-    "@salesforce/command": "3.0.5",
-    "@salesforce/core": "2.15.2",
+    "@salesforce/core": "^2.15.2",
     "tslib": "2.0.3"
   },
   "devDependencies": {
-    "@salesforce/ts-types": "1.4.3",
     "@types/chai": "4.2.14",
     "@types/mocha": "8.0.4",
-    "@types/node": "14.14.9",
     "@typescript-eslint/eslint-plugin": "4.8.1",
     "@typescript-eslint/parser": "4.8.1",
     "chai": "4.2.0",
