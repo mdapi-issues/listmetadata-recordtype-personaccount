@@ -1,4 +1,4 @@
-import { FileProperties, Connection } from 'jsforce';
+import type { FileProperties, Connection } from 'jsforce';
 
 export default async function listRecordTypes(
   conn: Connection
