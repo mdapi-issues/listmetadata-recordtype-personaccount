@@ -4,7 +4,7 @@ import {
   fixPersonAccountRecordTypes,
   queryPersonAccountRecordTypes
 } from '../src/workaround';
-import listRecordTypes from './issue';
+import { listRecordTypes } from './issue';
 
 describe('workaround', function () {
   this.slow(5000);
