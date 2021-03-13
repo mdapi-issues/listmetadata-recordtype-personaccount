@@ -1,6 +1,6 @@
 import type { FileProperties, Connection } from 'jsforce';
 
-export default async function listRecordTypes(
+export async function listRecordTypes(
   conn: Connection
 ): Promise<Array<FileProperties>> {
   let fileProperties = await conn.metadata.list({ type: 'RecordType' });
