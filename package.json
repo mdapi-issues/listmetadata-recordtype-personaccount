@@ -8,11 +8,11 @@
     "tslib": "2.1.0"
   },
   "devDependencies": {
-    "@types/chai": "4.2.16",
+    "@types/chai": "4.3.3",
     "@types/mocha": "8.2.2",
     "@typescript-eslint/eslint-plugin": "4.15.1",
     "@typescript-eslint/parser": "4.15.1",
-    "chai": "4.3.4",
+    "chai": "4.3.6",
     "eslint": "7.20.0",
     "eslint-config-prettier": "8.2.0",
     "mocha": "9.0.1",
