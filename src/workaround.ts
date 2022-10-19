@@ -1,4 +1,5 @@
-import type { FileProperties, Connection } from 'jsforce';
+import type { Connection } from "@salesforce/core";
+import type { FileProperties } from "jsforce/api/metadata";
 
 export interface RecordType {
   DeveloperName: string;
