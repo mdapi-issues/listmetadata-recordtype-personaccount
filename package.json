@@ -8,7 +8,7 @@
     "tslib": "2.4.0"
   },
   "devDependencies": {
-    "@salesforce/core": "3.31.17",
+    "@salesforce/core": "3.36.1",
     "@types/chai": "4.3.5",
     "@types/mocha": "10.0.1",
     "chai": "4.3.7",
