@@ -9,19 +9,19 @@
 Create a scratch org with PersonAccounts feature enabled
 
 ```console
-sfdx force:org:create -f config/project-scratch-def.json -s
+sf org create scratch -f config/project-scratch-def.json --set-default
 ```
 
 push some Metadata (here: `RecordType:PersonAccount.Freelancer`)
 
 ```console
-sfdx force:source:push
+sf project deploy start
 ```
 
 list RecordTypes using `listMetadata`
 
 ```console
-sfdx force:mdapi:listmetadata -m RecordType
+sf org list metadata -m RecordType
 ```
 
 ```diff
