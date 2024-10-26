@@ -3,8 +3,8 @@ import { expect } from "chai";
 import {
   fixPersonAccountRecordTypes,
   queryPersonAccountRecordTypes,
-} from "../src/workaround";
-import { listRecordTypes } from "./issue";
+} from "../src/workaround.js";
+import { listRecordTypes } from "./issue.js";
 
 describe("workaround", function () {
   this.slow(5000);

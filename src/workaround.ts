@@ -1,5 +1,5 @@
+import type { FileProperties } from "@jsforce/jsforce-node/lib/api/metadata.js";
 import type { Connection } from "@salesforce/core";
-import type { FileProperties } from "jsforce/api/metadata";
 
 export interface RecordType {
   DeveloperName: string;
@@ -31,8 +31,8 @@ export function fixPersonAccountRecordTypes(
   personAccountRecordTypes: Array<RecordType>
 ): Array<FileProperties> {
   return fileProperties.map((fileProperty) => {
-    if (fileProperty.type === 'RecordType' && personAccountRecordTypes) {
-      const fullNameParts = fileProperty.fullName.split('.');
+    if (fileProperty.type === "RecordType" && personAccountRecordTypes) {
+      const fullNameParts = fileProperty.fullName.split(".");
       const itemType = fullNameParts[0];
       const fullName = fullNameParts[1];
       const personAccountRecordTypeMatch = personAccountRecordTypes.find(
@@ -43,7 +43,7 @@ export function fixPersonAccountRecordTypes(
       );
       if (personAccountRecordTypeMatch) {
         fileProperty.fullName = `PersonAccount.${fullName}`;
-        fileProperty.fileName = 'objects/PersonAccount.object';
+        fileProperty.fileName = "objects/PersonAccount.object";
       }
     }
     return fileProperty;
