@@ -5,7 +5,7 @@
   "author": "Matthias Rolke @amtrack",
   "bugs": "https://github.com/mdapi-issues/listmetadata-recordtype-personaccount/issues",
   "dependencies": {
-    "tslib": "2.4.0"
+    "tslib": "2.8.1"
   },
   "devDependencies": {
     "@salesforce/core": "5.3.20",
