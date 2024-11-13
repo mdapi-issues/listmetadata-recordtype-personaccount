@@ -1,7 +1,10 @@
 import { expect } from "chai";
-import { readFile } from "node:fs/promises";
-import { join } from "path";
-import { fixPersonAccountRecordTypes } from "../src/workaround";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { join } from "node:path";
+import { fixPersonAccountRecordTypes } from "../src/workaround.js";
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 const personAccountRecordTypes = [
   {
@@ -15,18 +18,14 @@ const personAccountRecordTypes = [
     IsPersonType: true,
   },
 ];
+const expected = JSON.parse(
+  readFileSync(join(__dirname, "fixtures", "expected.json"), "utf8")
+);
+const actual = JSON.parse(
+  readFileSync(join(__dirname, "fixtures", "actual.json"), "utf8")
+);
 
 describe("person-accounts", function () {
-  let expected, actual;
-  before(async () => {
-    expected = JSON.parse(
-      await readFile(join(__dirname, "fixtures", "expected.json"), "utf8")
-    );
-    actual = JSON.parse(
-      await readFile(join(__dirname, "fixtures", "actual.json"), "utf8")
-    );
-  });
-
   describe("fixPersonAccountRecordTypes", () => {
     it("fixes a PersonAccount RecordType being listed on Account", async () => {
       const result = fixPersonAccountRecordTypes(
