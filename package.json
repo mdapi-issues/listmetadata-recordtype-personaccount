@@ -9,7 +9,7 @@
     "tslib": "2.8.1"
   },
   "devDependencies": {
-    "@salesforce/core": "8.8.0",
+    "@salesforce/core": "8.8.2",
     "@salesforce/dev-scripts": "10.2.11"
   },
   "files": [
