@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@salesforce/core": "8.8.2",
-    "@salesforce/dev-scripts": "10.2.11"
+    "@salesforce/dev-scripts": "11.0.2"
   },
   "files": [
     "/lib"
